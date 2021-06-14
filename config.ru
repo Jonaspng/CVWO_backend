@@ -2,9 +2,9 @@
 require_relative "config/environment"
 
 run Rails.application
-require 'rack-cors'
-Rails.application.load_server
 
+Rails.application.load_server
+require 'rack/cors'
 use Rack::Cors do
     allow do
       origins 'https://todolist-cvwo.herokuapp.com/'
