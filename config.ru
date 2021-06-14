@@ -5,7 +5,7 @@ run Rails.application
 require 'rack/cors'
 use Rack::Cors do
     allow do
-      origins 'https://todolist-cvwo.herokuapp.com/'
+      origins 'https://todolist-cvwo.herokuapp.com'
       resource '*', 
       headers: :any, 
       methods: [:get, :post, :patch, :put, :delete], 
