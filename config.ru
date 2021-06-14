@@ -1,9 +1,14 @@
 # This file is used by Rack-based servers to start the application.
 
+
+require_relative "config/environment"
+
+run Rails.application
+
 require 'rack/cors'
 use Rack::Cors do
     allow do
-        origins 'https://todolist-cvwo.herokuapp.com/'
+        origins 'https://todolist-cvwo.herokuapp.com'
         resource '*', 
         headers: :any, 
         methods: [:get, :post, :patch, :put, :delete], 
@@ -11,7 +16,4 @@ use Rack::Cors do
   end
 end
 
-require_relative "config/environment"
-
-run Rails.application
 Rails.application.load_server
