@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-  before_action :require_user, except: [:create, :validation, :persist]
+  before_action :require_user, except: [:create, :validation,:persist]
 
   def create
     user = User.find_by(email: params[:email].downcase)
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def persist
-    if current_user.id != nil
+    if logged_in?
       render json: { "auth": true }
     else
       render json: { "auth": false }
