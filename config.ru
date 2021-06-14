@@ -2,8 +2,6 @@
 require_relative "config/environment"
 
 run Rails.application
-
-Rails.application.load_server
 require 'rack/cors'
 use Rack::Cors do
     allow do
@@ -14,3 +12,5 @@ use Rack::Cors do
       credentials: true
     end
   end
+Rails.application.load_server
+
