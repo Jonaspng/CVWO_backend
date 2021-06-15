@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   end
 
   def persist
-    if current_user.id != nil
+    if logged_in?
       render json: { "auth": true }
     else
       render json: { "auth": false }
