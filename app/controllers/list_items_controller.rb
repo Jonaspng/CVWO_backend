@@ -12,9 +12,9 @@ class ListItemsController < ApplicationController
 
   def index
     if $filter
-      items = current_user.listItems.where(category: $category)
+      items = current_user.listItems.where(category: $category).order(:id)
     else
-      items = current_user.listItems
+      items = current_user.listItems.order(:id)
     end
     render json: { "items": items }
   end
