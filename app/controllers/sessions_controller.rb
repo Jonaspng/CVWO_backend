@@ -29,6 +29,8 @@ class SessionsController < ApplicationController
     if $error
       render json: { "error": ['Incorrect email or password'] }
       $error = false
+    else
+      render json: {"error": []}
     end
   end
 
