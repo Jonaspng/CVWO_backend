@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to "https://todolist-cvwo.herokuapp.com"
+    redirect_to 'https://todolist-cvwo.herokuapp.com'
   end
 
   def validation
@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
       render json: { "error": ['Incorrect email or password'] }
       $error = false
     else
-      render json: {"error": []}
+      render json: { "error": [] }
     end
   end
 
@@ -51,12 +51,11 @@ class SessionsController < ApplicationController
         data.append(category.length)
       end
     end
-    render json: {"data": data}
+    render json: { "data": data }
   end
 
   def show_username
     username = current_user.username
-    render json: {"username": username}
+    render json: { "username": username }
   end
-
 end

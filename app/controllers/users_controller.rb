@@ -3,10 +3,9 @@ class UsersController < ApplicationController
   before_action :require_user, only: [:index, :update]
   before_action :require_same_user, only: [:update]
 
-
   $are_there_errors = false
   $successful_registration = false
-  $successful_update=false
+  $successful_update = false
 
   def index
     @user = current_user
@@ -33,7 +32,7 @@ class UsersController < ApplicationController
       $error = @user.errors.full_messages
       $are_there_errors = true
     else
-      $successful_update=true
+      $successful_update = true
     end
   end
 
@@ -42,14 +41,14 @@ class UsersController < ApplicationController
       render json: { "error": $error }
       $are_there_errors = false
     else
-      render json:{"error":[]}
+      render json:{ "error":[] }
     end
   end
 
   def create_success
     if $successful_update
-      render json: {"success": ["Details updated sucessfully"]}
-      $successful_update=false
+      render json: {"success": ['Details updated sucessfully']}
+      $successful_update = false
     end
   end
 
@@ -60,8 +59,6 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user =User.find(params[:id])
+    @user = User.find(params[:id])
   end
-
-  
 end

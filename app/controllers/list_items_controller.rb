@@ -2,7 +2,7 @@ class ListItemsController < ApplicationController
   before_action :set_item, only: [:destroy, :update]
   before_action :require_user
   before_action :require_same_user, only: [:destroy, :update]
-  $filter=false
+  $filter = false
 
   def create
     @item = ListItem.new(params.require(:item).permit(:title, :description, :category, :deadline))
@@ -34,12 +34,12 @@ class ListItemsController < ApplicationController
   end
 
   def filter
-    $filter=true
-    $category=params.require(:filterValue)
+    $filter = true
+    $category = params.require(:filterValue)
   end
 
   def show_all
-    $filter=false
+    $filter = false
   end
 
   private

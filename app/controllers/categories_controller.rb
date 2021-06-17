@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   def create
     @category = current_user.categories.find_by(category: params[:category])
     if @category
-      $error="category exist"
+      $error = 'category exist'
     else
       @category = Category.new(category: params.require(:category))
       @category.user = current_user
@@ -23,10 +23,9 @@ class CategoriesController < ApplicationController
   end
 
   def require_same_user
-    @category =Category.find(params[:id])
+    @category = Category.find(params[:id])
     if current_user != @category.user
       redirect_to 'https://todolist-cvwo.herokuapp.com/dashboard'
     end
   end
-
 end
