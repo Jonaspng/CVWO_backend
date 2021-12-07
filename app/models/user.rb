@@ -1,7 +1,9 @@
 class User < ApplicationRecord
   has_many :listItems
   has_many :categories
+  #Downcase email before saving
   before_save {self.email = email.downcase}
+  # Help checks for valid email address
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false },
