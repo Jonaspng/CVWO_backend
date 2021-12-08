@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   def create
     @category = current_user.categories.find_by(category: params[:category])
     if @category
-      $error = 'category exist'
+      $error = 'category already exist'
     else
       @category = Category.new(category: params.require(:category))
       @category.user = current_user
@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
 
   def index
     categories = current_user.categories
-    render json: { "categories": categories }
+    render json: {"categories": categories}
   end
 
   def destroy
