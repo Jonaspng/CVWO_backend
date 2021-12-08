@@ -35,7 +35,7 @@ class SessionsController < ApplicationController
   end
 
   def chart
-    data=[]
+    data = []
     categories = current_user.categories
     category = current_user.listItems.where(category: 'Null')
     if category == nil
