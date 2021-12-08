@@ -8,7 +8,8 @@ class ListItemsController < ApplicationController
     @item = ListItem.new(params.require(:item).permit(:title, :description, :deadline))
     @item.user = current_user
     # changes here
-    @item.category = Category.find(Integer(params.require(:item).permit(:category)))
+    @test = Integer(params.require(:item).permit(:category))
+    @item.category = Category.find(@test)
     @item.save
   end
 
