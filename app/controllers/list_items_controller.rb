@@ -5,7 +5,7 @@ class ListItemsController < ApplicationController
   $filter = false
 
   def create
-    @item = ListItem.new(params.require(:item).permit(:title, :description, :deadline, Integer(:category_id)))
+    @item = ListItem.new(params.require(:item).permit(:title, :description, :deadline, :category_id))
     @item.user = current_user
     @item.save
   end
