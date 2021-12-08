@@ -44,7 +44,7 @@ class SessionsController < ApplicationController
       data.append(category.length)
     end
     for x in categories
-      category = current_user.listItems.where(category_id: Interger(x.id))
+      category = current_user.listItems.where(category_id: Integer(x.id))
       if category == nil
         data.append(0)
       else
