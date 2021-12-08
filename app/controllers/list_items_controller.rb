@@ -7,7 +7,7 @@ class ListItemsController < ApplicationController
   def create
     @item = ListItem.new(params.require(:item).permit(:title, :description, :deadline))
     @item.user = current_user
-    @item.category = Category.find(params[:category_id].to_i)
+    @item.category = Category.find(params(:item[:category_id]).to_i)
     @item.save
   end
 
