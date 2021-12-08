@@ -37,7 +37,7 @@ class SessionsController < ApplicationController
   def chart
     data = []
     categories = current_user.categories
-    category = current_user.list_items.where(category_id: 0)
+    category = current_user.listItems.where(category_id: 0)
     if category == nil
       data.append(0)
     else
