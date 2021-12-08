@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :listItems
+  has_many :list_items
   has_many :categories
   #Downcase email before saving
   before_save {self.email = email.downcase}
@@ -13,6 +13,6 @@ class User < ApplicationRecord
                        length: {minimum: 5, maximum: 30}
   has_secure_password
   validates :password, presence: {on: create}, 
-                       length: {minimum: 8},
+                       length: {minimum: 8}, 
                        :if => :password_digest_changed?
 end
