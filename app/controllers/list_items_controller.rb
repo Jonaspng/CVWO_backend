@@ -3,6 +3,7 @@ class ListItemsController < ApplicationController
   before_action :require_user
   before_action :require_same_user, only: [:destroy, :update]
   $filter = false
+  $categories = []
 
   def create
     @item = ListItem.new(params.require(:item).permit(:title, :description, :deadline, :category_id))
@@ -12,11 +13,15 @@ class ListItemsController < ApplicationController
 
   def index
     if $filter
-      items = current_user.listItems.where(category: $category).order(:id)
+      items = current_user.listItems.where(category_id: $category).order(:id)
     else
       items = current_user.listItems.order(:id)
+      for item in items
+        @category_name = Category.find(item.category_id)
+        $categories.append(@category_name.category)
+      end
     end
-    render json: { "items": items }
+    render json: {"items": items, "categories": $categories}
   end
 
   def destroy
