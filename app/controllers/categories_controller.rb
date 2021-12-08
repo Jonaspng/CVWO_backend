@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category.destroy
+    @category.delete_all
   end
 
   def require_same_user
