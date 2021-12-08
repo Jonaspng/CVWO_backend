@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
   has_many :listItems, dependent: :destroy
-  has_many :users, through: :listItems
+  belongs_to :user
   validates :category, presence: true
 end
