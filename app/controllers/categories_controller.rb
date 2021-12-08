@@ -20,6 +20,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category.destroy
+    @category.ListItem.destroy
   end
 
   def require_same_user
