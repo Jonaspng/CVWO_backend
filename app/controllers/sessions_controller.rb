@@ -38,14 +38,15 @@ class SessionsController < ApplicationController
     data = []
     categories = current_user.categories
     category = current_user.listItems.where(category: 'Null')
-    if category == nil
+    # changes made here
+    if category == 'nil'
       data.append(0)
     else
       data.append(category.length)
     end
     for x in categories
       category = current_user.listItems.where(category: x.category)
-      if category == nil
+      if category == 'nil'
         data.append(0)
       else
         data.append(category.length)
