@@ -13,11 +13,12 @@ class ListItemsController < ApplicationController
   def index
     categories = []
     if $filter
-      items = current_user.listItems.where(category_id: category).order(:id)
+      items = current_user.listItems.where(category_id: $category).order(:id)
       for item in items
         @category_name = Category.find(item.category_id)
         categories.append(@category_name.category)
       end
+      $filter = false
     else
       items = current_user.listItems.order(:id)
       for item in items
