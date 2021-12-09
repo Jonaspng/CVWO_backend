@@ -22,6 +22,9 @@ class UsersController < ApplicationController
     else
       session[:user_id] = @user.id
       redirect_to 'https://todolist-cvwo.herokuapp.com/dashboard'
+      @category = Category.new(category: "Null")
+      @category.user = current_user
+      @category.save
       $successful_registration = true
     end
   end
