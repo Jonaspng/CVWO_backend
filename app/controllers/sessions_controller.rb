@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email].downcase)
     if user && user.authenticate(params.require(:password))
       session[:user_id] = user.id
-      logged_in = true
       redirect_to 'https://todolist-cvwo.herokuapp.com/dashboard'
     else
       redirect_to 'https://todolist-cvwo.herokuapp.com/login'
