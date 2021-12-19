@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module CVWOBackend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.action_controller.default_protect_from_forgery = true
     config.api_only = true
     config.load_defaults 6.1
     # Configuration for the application, engines, and railties goes here.
