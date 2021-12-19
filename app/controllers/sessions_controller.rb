@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
-  
-  before_action :require_user, except: [:create, :validation, :persist]
+
 
   def create
     user = User.find_by(email: params[:email].downcase)
