@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
-  before_action :current_user, except: [:create, :validation]
-  before_action :logged_in?, except: [:create, :validation]
+  before_action :current_user
+  before_action :logged_in?
   before_action :require_user, except: [:create, :validation]
 
   def create
