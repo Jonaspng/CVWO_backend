@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  include ActionController::CookieStore
+  include ActionController::Cookies
   skip_before_action :verify_authenticity_token, raise: false
 
   def current_user
