@@ -1,11 +1,10 @@
 class SessionsController < ApplicationController
-  before_action :require_user, except: [:create, :validation,:persist]
+  before_action :require_user, except: [:create, :validation]
 
   def create
     user = User.find_by(email: params[:email].downcase)
     if user && user.authenticate(params.require(:password))
       session[:user_id] = user.id
-      puts("ok")
       redirect_to 'https://todolist-cvwo.herokuapp.com/dashboard'
     else
       redirect_to 'https://todolist-cvwo.herokuapp.com/login'
