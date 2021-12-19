@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :require_user, except: [:create, :validation,:persist]
+  before_action :require_user, except: [:create, :validation]
 
   def create
     user = User.find_by(email: params[:email].downcase)
@@ -14,9 +14,9 @@ class SessionsController < ApplicationController
 
   def persist
     if logged_in?
-      render json: { "auth": true }
+      render json: {"auth": true}
     else
-      render json: { "auth": false }
+      render json: {"auth": false}
     end
   end
 
@@ -27,10 +27,10 @@ class SessionsController < ApplicationController
 
   def validation
     if $error
-      render json: { "error": ['Incorrect email or password'] }
+      render json: {"error": ['Incorrect email or password']}
       $error = false
     else
-      render json: { "error": [] }
+      render json: {"error": []}
     end
   end
 
