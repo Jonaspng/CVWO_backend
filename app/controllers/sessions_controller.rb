@@ -16,9 +16,9 @@ class SessionsController < ApplicationController
 
   def persist
     if logged_in?
-      render json: {"auth": true}
+      render json: {"auth": "true"}
     else
-      render json: {"auth": false}
+      render json: {"auth": "false"}
     end
   end
 
