@@ -34,15 +34,6 @@ class ListItemsController < ApplicationController
     end
   end
 
-  def filter
-    $filter = true
-    $category = params.require(:filterValue)
-  end
-
-  def show_all
-    $filter = false
-  end
-
   private
 
   def set_item

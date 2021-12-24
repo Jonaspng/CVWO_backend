@@ -10,6 +10,4 @@ Rails.application.routes.draw do
   post 'api/login', to: 'sessions#create'
   post 'api/logout', to: 'sessions#destroy'
   get 'api/chart', to: 'sessions#chart'
-  post 'api/filter', to: 'list_items#filter'
-  post 'api/show_all', to: 'list_items#show_all'
 end
