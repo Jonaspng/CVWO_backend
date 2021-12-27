@@ -1,18 +1,30 @@
-# CVWO Task Management Application (Backend)
-
+<h1 align="center">Express ToDoList</h2>
+<p align="center">Quick and easy solution to a digital ToDoList</p>
+<p align="center">This application is built as my submission for <a href = "https://www.comp.nus.edu.sg/~vwo/">CVWO</a> Holiday Assignment</p>
+<p align="center">Please note that this page only contains the source code for the backend of the application. Please click <a href = "https://github.com/Jonaspng/CVWO_frontend"> here<a/> to access the source code for the React frontend of this application.</p>
 <p align = "center">
   <img src = "https://img.shields.io/github/last-commit/Jonaspng/CVWO_backend?logo=Github"/>
-  <img src = "https://img.shields.io/github/forks/Jonaspng/CVWO_backend??logo=Github"/>
-  <img src = "https://img.shields.io/github/repo-size/Jonaspng/CVWO_backend??logo=Github"/>
+  <img src = "https://img.shields.io/github/forks/Jonaspng/CVWO_backend?logo=Github"/>
+  <img src = "https://img.shields.io/github/repo-size/Jonaspng/CVWO_backend?logo=Github"/>
 </p>
 
+<p align = "center">
+  <a href = "https://todolist-cvwo.herokuapp.com/">
+    <img src="https://raw.githubusercontent.com/Jonaspng/CVWO_frontend/main/public/homepage.png"/>    
+  </a>
+</p>
 
-Name: Png Yi Wei Jonas
+## Developer Details
 
-Matriculation Number: A0233271N
+Name: **Png Yi Wei Jonas**
 
-Ruby on Rails API Backend for [Express ToDoList](https://todolist-cvwo.herokuapp.com)
+Matriculation Number: **A0233271N**
 
-## Assignment Submissions
+## Assignment Submission
 
-Coming soon!
+Coming Soon!
+
+## Link to application
+
+Click [here](https://todolist-cvwo.herokuapp.com/) to access the web application!
+
