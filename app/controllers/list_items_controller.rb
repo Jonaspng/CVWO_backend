@@ -25,7 +25,7 @@ class ListItemsController < ApplicationController
   end
 
   def update
-    @item.update(params.require(:item).permit(:title, :description, :category, :deadline))
+    @item.update(params.require(:item).permit(:title, :description, :deadline, :category_id))
   end
 
   def require_same_user
