@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 
   def create_error
     if $are_there_errors
-      render json: { "error": $error }
+      render json: { "error": $error2 }
       $are_there_errors = false
     else
       render json:{ "error":[] }
