@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user.save
     if @user.errors.any?
       redirect_to 'https://todolist-cvwo.herokuapp.com/register'
-      $error = @user.errors.full_messages
+      $error2 = @user.errors.full_messages
       $are_there_errors = true
     else
       session[:user_id] = @user.id
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   def update
     @user.update(params.require(:user).permit(:email, :username, :password))
     if @user.errors.any?
-      $error = @user.errors.full_messages
+      $error2 = @user.errors.full_messages
       $are_there_errors = true
     else
       $successful_update = true
