@@ -2,7 +2,6 @@ class ListItemsController < ApplicationController
   before_action :set_item, only: [:destroy, :update]
   before_action :require_user
   before_action :require_same_user, only: [:destroy, :update]
-  $filter = false
 
   def create
     @item = ListItem.new(params.require(:item).permit(:title, :description, :deadline, :category_id))
@@ -11,12 +10,7 @@ class ListItemsController < ApplicationController
   end
 
   def index
-    if $filter
-      items = current_user.listItems.where(category_id: $category).order(:id)
-      $filter = false
-    else
-      items = current_user.listItems.order(:id)
-    end
+    items = current_user.listItems.order(:id)
     render json: {"items": items}
   end
 
