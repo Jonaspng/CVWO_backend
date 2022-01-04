@@ -52,6 +52,8 @@ class UsersController < ApplicationController
     if $successful_update
       render json: {"success": ['Details updated sucessfully']}
       $successful_update = false
+    else
+      render json:{"success": []}
     end
   end
 
