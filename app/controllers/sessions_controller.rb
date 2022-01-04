@@ -29,7 +29,7 @@ class SessionsController < ApplicationController
 
   def validation
     if $error
-      render json: {"error": ['Incorrect email or password']}
+      render json: {"error": ['Invalid email or password']}
       $error = false
     else
       render json: {"error": []}
