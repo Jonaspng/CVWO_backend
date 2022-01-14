@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   end
 
   def index
-    categories = current_user.categories
+    categories = current_user.categories.order(:id)
     render json: {"categories": categories}
   end
 
