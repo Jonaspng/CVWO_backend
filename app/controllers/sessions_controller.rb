@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
 
   def chart
     data = []
-    categories = current_user.categories
+    categories = current_user.categories.order(:id)
     for x in categories
       category = current_user.listItems.where(category_id: Integer(x.id))
       if category == nil
