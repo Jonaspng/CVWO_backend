@@ -22,7 +22,9 @@ Matriculation Number: **A0233271N**
 
 ## Assignment Submission
 
-Coming Soon!
+[CVWO Mid Assignment Write up](https://github.com/Jonaspng/CVWO_frontend/blob/main/CVWO%20Reports/PngYiWeiJonas_A0233271N_midAssignmentWriteUp.pdf)
+
+[CVWO Final Write Up](https://github.com/Jonaspng/CVWO_frontend/blob/main/CVWO%20Reports/PngYiWeiJonas_A0233271N_FinalWriteUp.pdf)
 
 ## Link to application
 
