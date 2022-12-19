@@ -1,6 +1,9 @@
 {
   "name": "cvwo-backend",
   "private": true,
+  "scripts": {
+    "build": "NODE_OPTIONS=--openssl-legacy-provider && next build && next export"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
