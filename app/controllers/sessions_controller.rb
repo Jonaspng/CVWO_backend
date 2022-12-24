@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to 'https://todolist-cvwo.herokuapp.com'
+    redirect_to 'https://cvwo-todolist.vercel.app/'
   end
 
   def validation
