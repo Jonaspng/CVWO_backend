@@ -22,7 +22,6 @@ test:
 
 production:
   url: <%= ENV['DATABASE_URL'] %>
-  adapter: postgresql
-  database: my_database_production
-  pool: 5
-  timeout: 5000
+  password: <%= ENV['RAILWAYAPP_DATABASE_PASSWORD'] %>
+  database: railwayapp_production
+  username: railwayapp
