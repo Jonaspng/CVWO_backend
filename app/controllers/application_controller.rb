@@ -14,7 +14,7 @@ class ApplicationController < ActionController::API
 
   def require_user
     if !logged_in?
-      redirect_to 'https://todolist-cvwo.herokuapp.com'
+      redirect_to 'https://cvwo-todolist.vercel.app/'
     end
   end
 end

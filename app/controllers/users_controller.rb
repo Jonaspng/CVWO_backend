@@ -16,12 +16,12 @@ class UsersController < ApplicationController
     @user = User.new(params.require(:user).permit(:email, :username, :password))
     @user.save
     if @user.errors.any?
-      redirect_to 'https://todolist-cvwo.herokuapp.com/register'
+      redirect_to 'https://cvwo-todolist.vercel.app/register'
       $error2 = @user.errors.full_messages
       $are_there_errors = true
     else
       session[:user_id] = @user.id
-      redirect_to 'https://todolist-cvwo.herokuapp.com/dashboard'
+      redirect_to 'https://cvwo-todolist.vercel.app/dashboard'
       @category = Category.new(category: "Null")
       @category.user = current_user
       @category.save
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
 
   def require_same_user
     if current_user != @user
-      redirect_to 'https://todolist-cvwo.herokuapp.com/dashboard'
+      redirect_to 'https://cvwo-todolist.vercel.app/dashboard'
     end
   end
 

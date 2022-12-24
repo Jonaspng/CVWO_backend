@@ -7,9 +7,9 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email].downcase)
     if user && user.authenticate(params.require(:password))
       session[:user_id] = user.id
-      redirect_to 'https://todolist-cvwo.herokuapp.com/dashboard'
+      redirect_to 'https://cvwo-todolist.vercel.app/dashboard'
     else
-      redirect_to 'https://todolist-cvwo.herokuapp.com/login'
+      redirect_to 'https://cvwo-todolist.vercel.app/login'
       $error = true
     end
   end

@@ -24,7 +24,7 @@ class ListItemsController < ApplicationController
 
   def require_same_user
     if current_user != @item.user
-      redirect_to 'https://todolist-cvwo.herokuapp.com/dashboard'
+      redirect_to 'https://cvwo-todolist.vercel.app/dashboard'
     end
   end
 

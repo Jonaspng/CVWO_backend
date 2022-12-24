@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
   def require_same_user
     @category = Category.find(params[:id])
     if current_user != @category.user
-      redirect_to 'https://todolist-cvwo.herokuapp.com/dashboard'
+      redirect_to 'https://cvwo-todolist.vercel.app/dashboard'
     end
   end
 end
