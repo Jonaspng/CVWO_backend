@@ -22,7 +22,7 @@ module CVWOBackend
     # config.eager_load_paths << Rails.root.join("extras")
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://todolist-cvwo.herokuapp.com'
+        origins 'https://cvwo-todolist.vercel.app/'
         resource '*',
         headers: :any,
         methods: [:get, :patch, :put, :delete, :post, :options]

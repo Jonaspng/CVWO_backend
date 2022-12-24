@@ -9,7 +9,7 @@
 </p>
 
 <p align = "center">
-  <a href = "https://todolist-cvwo.herokuapp.com/">
+  <a href = "https://cvwo-todolist.vercel.app/">
     <img src="https://raw.githubusercontent.com/Jonaspng/CVWO_frontend/main/public/homepage.png"/>    
   </a>
 </p>
@@ -28,5 +28,5 @@ Matriculation Number: **A0233271N**
 
 ## Link to application
 
-Click [here](https://todolist-cvwo.herokuapp.com/) to access the web application!
+Click [here](https://cvwo-todolist.vercel.app/) to access the web application!
 
