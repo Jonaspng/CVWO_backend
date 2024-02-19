@@ -4,6 +4,9 @@
   "engines": {
     "node": "16.20.2"
   },
+  "scripts": {
+    "start": "--openssl-legacy-provider start"
+  }
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
