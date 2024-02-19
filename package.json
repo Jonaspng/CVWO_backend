@@ -2,7 +2,7 @@
   "name": "cvwo-backend",
   "private": true,
   "engines": {
-    "node": "18.12.0"
+    "node": "18.18.2"
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
