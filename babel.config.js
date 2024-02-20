@@ -14,6 +14,7 @@ module.exports = function(api) {
 
   const plugins = [
     // Add any additional Babel plugins here
+    "@babel/plugin-syntax-dynamic-import",
   ];
 
   return {
