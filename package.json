@@ -1,6 +1,6 @@
 {
   "name": "cvwo-backend",
-  "private": true,
+  "private": false,
   "engines": {
     "node": "21.1.0"
   },
