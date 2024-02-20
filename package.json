@@ -2,13 +2,13 @@
   "name": "cvwo-backend",
   "private": true,
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "5.4.0",
+    "@rails/webpacker": "^5.4.4",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0"
