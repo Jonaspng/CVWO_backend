@@ -1,6 +1,6 @@
 {
   "name": "cvwo-backend",
-  "private": false,
+  "private": true,
   "engines": {
     "node": "21.1.0"
   },
@@ -9,7 +9,8 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^5.4.4",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "webpack": "^5.90.3"
   },
   "version": "0.1.0"
 }
