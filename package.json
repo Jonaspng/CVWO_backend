@@ -1,9 +1,6 @@
 {
   "name": "cvwo-backend",
   "private": true,
-  "engines": {
-    "node": "18.19.1"
-  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
