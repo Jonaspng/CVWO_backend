@@ -4,7 +4,7 @@ module.exports = {
     // ... other output options
 
     // Set the hash function to 'sha512'
-    hashFunction: 'sha256',
+    hashFunction: 'xxhash64',
   },
   module: {
     rules: [
