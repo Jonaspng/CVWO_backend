@@ -1,5 +1,10 @@
 module.exports = {
   // ... other webpack configuration options
+  node: {
+    __dirname: false,  // or true if you need it
+    __filename: false, // or true if you need it
+    global: true,
+  },
   output: {
     // ... other output options
 
